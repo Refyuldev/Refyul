@@ -33,9 +33,12 @@ export default function Home() {
             >
               Join the waitlist
             </Link>
-            <button className="md:text-base text-sm font-medium text-primary bg-background rounded-lg md:p-4 p-2 cursor-pointer border border-primary">
+            <Link
+              href={"#works"}
+              className="md:text-base text-sm font-medium text-primary bg-background rounded-lg md:p-4 p-2 cursor-pointer border border-primary"
+            >
               Learn how it works ↓
-            </button>
+            </Link>
           </div>
           <div className="w-full flex flex-col justify-start items-start gap-2">
             <div className="flex justify-start items-center gap-4">
@@ -89,7 +92,10 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="w-full py-28 px-4 flex justify-center items-center">
+      <section
+        className="w-full py-28 px-4 flex justify-center items-center"
+        id="works"
+      >
         <section className="w-full max-w-[1216px] flex flex-col justify-start items-center gap-11">
           <div className="w-full flex flex-col justify-start items-center gap-2">
             <h2 className="md:text-3xl text-2xl font-medium text-grey-04 text-center">
