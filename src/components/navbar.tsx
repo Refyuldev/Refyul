@@ -1,5 +1,6 @@
 import Image from "next/image";
 import logo from "@/assets/logo.webp";
+import Link from "next/link";
 
 export default function Navbar() {
   return (
@@ -14,9 +15,12 @@ export default function Navbar() {
         />
         <p className="md:text-4xl text-2xl font-bold text-primary">Refyul</p>
       </div>
-      <button className="md:text-base text-sm font-medium text-white bg-primary rounded-lg md:p-4 p-2 cursor-pointer">
+      <Link
+        href={"#waitlist-form"}
+        className="md:text-base text-sm font-medium text-white bg-primary rounded-lg md:p-4 p-2 cursor-pointer"
+      >
         Join the waitlist
-      </button>
+      </Link>
     </nav>
   );
 }

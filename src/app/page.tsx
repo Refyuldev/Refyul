@@ -1,6 +1,7 @@
 import Image from "next/image";
 import heroImage from "@/assets/hero image.webp";
 import { WaitListForm } from "@/components/form";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -26,9 +27,12 @@ export default function Home() {
             </p>
           </div>
           <div className="w-full flex justify-start items-center md:gap-6 gap-2 flex-wrap">
-            <button className="md:text-base text-sm font-medium text-white bg-primary rounded-lg md:p-4 p-2 cursor-pointer border border-primary">
+            <Link
+              href={"#waitlist-form"}
+              className="md:text-base text-sm font-medium text-white bg-primary rounded-lg md:p-4 p-2 cursor-pointer border border-primary"
+            >
               Join the waitlist
-            </button>
+            </Link>
             <button className="md:text-base text-sm font-medium text-primary bg-background rounded-lg md:p-4 p-2 cursor-pointer border border-primary">
               Learn how it works ↓
             </button>
@@ -584,7 +588,10 @@ export default function Home() {
           </div>
         </section>
       </section>
-      <section className="w-full flex justify-center items-center py-20 px-4 bg-[#F0FDF4]">
+      <section
+        className="w-full flex justify-center items-center py-20 px-4 bg-[#F0FDF4]"
+        id="waitlist-form"
+      >
         <section className="w-full max-w-[768px] flex flex-col justify-start items-center gap-12">
           <div className="w-full flex flex-col justify-start items-center gap-2">
             <h2 className="md:text-3xl text-2xl font-medium text-grey-04 text-center">
