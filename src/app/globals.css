@@ -19,6 +19,9 @@
   --color-grey-04: #0A0A0A;
 }
 
+html{
+  scroll-behavior: smooth;
+}
 body {
   background: var(--background);
   color: var(--foreground);

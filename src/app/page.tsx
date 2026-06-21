@@ -203,7 +203,10 @@ export default function Home() {
         </section>
       </section>
       {/* order section */}
-      <section className="w-full bg-white flex justify-center items-center sm:px-8 px-4 py-24">
+      <section
+        id="works"
+        className="w-full bg-white flex justify-center items-center sm:px-8 px-4 py-24"
+      >
         <section className="w-full max-w-[1442px] flex lg:flex-row flex-col justify-between items-center gap-4">
           <section className="w-full lg:max-w-[735px] max-w-full flex flex-col justify-start items-start gap-4">
             <div className="w-full flex flex-col justify-start items-start gap-2">
@@ -264,7 +267,10 @@ export default function Home() {
         </section>
       </section>
       {/* delievery section */}
-      <section className="w-full flex justify-center items-center py-20 px-4 sm:px-8 bg-linear-180 from-[#F0FDF4] to-white">
+      <section
+        id="service"
+        className="w-full flex justify-center items-center py-20 px-4 sm:px-8 bg-linear-180 from-[#F0FDF4] to-white"
+      >
         <section className="w-full max-w-[1442px] flex flex-col justify-start items-center gap-16">
           <div className="w-full max-w-[735px] flex flex-col justify-start items-center text-center gap-5">
             <span className="bg-[#F4F3FF] py-1 px-3.5 text-[#5925DC] text-sm rounded-full font-medium uppercase leading-tight">
@@ -353,7 +359,10 @@ export default function Home() {
         </section>
       </section>
       {/* coverage */}
-      <section className="w-full flex justify-center items-center py-20 px-4 sm:px-8 bg-linear-180 from-[#F0FDF4] to-white">
+      <section
+        id="coverage"
+        className="w-full flex justify-center items-center py-20 px-4 sm:px-8 bg-linear-180 from-[#F0FDF4] to-white"
+      >
         <section className="w-full max-w-[1442px] flex lg:flex-row flex-col justify-between items-center gap-4">
           <section className="w-full lg:max-w-[735px] max-w-full flex flex-col justify-start items-start gap-4">
             <div className="w-full flex flex-col justify-start items-start gap-2">
@@ -518,7 +527,10 @@ export default function Home() {
         </section>
       </section>
       {/* FAQ section */}
-      <section className="w-full flex justify-center items-center py-20 px-4 sm:px-8 bg-linear-180 from-[#F0FDF4] to-white">
+      <section
+        id="faq"
+        className="w-full flex justify-center items-center py-20 px-4 sm:px-8 bg-linear-180 from-[#F0FDF4] to-white"
+      >
         <section className="w-full max-w-[1442px] flex flex-col justify-start items-center gap-16">
           <div className="w-full max-w-[735px] flex flex-col justify-start items-center text-center gap-5">
             <span className="bg-[#F4F3FF] py-1 px-3.5 text-[#5925DC] text-sm rounded-full font-medium uppercase leading-tight">

@@ -245,7 +245,7 @@ export const companyData: string[] = [
   "Investor Relations",
 ];
 export const contactData: string[] = [
-  "+234 (0) 803 000 0000",
-  "hello@refyul.ng",
-  "14A Admiralty Way, Lekki Phase 1, Lagos",
+  "+2348158440088",
+  "info@refyul.org",
+  "19 Seriki street Idi-Araba, Mushin, Lagos",
 ];

@@ -9,7 +9,7 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="w-full pt-12 pb-8 sm:px-8 px-4 relative">
+    <header className="w-full sm:pt-12 pt-5 sm:pb-8 pb-4 sm:px-8 px-4 relative">
       <nav className="w-full flex justify-between items-center gap-3 max-w-[1442px] mx-auto relative z-20">
         <div className="flex justify-start items-center gap-3">
           <Image
@@ -25,30 +25,30 @@ export default function Navbar() {
         </div>
 
         <div className="hidden lg:flex justify-center items-center gap-6">
-          <Link
-            href="/"
+          <a
+            href="#service"
             className="text-lg font-normal text-black outline-none"
           >
             Our Service
-          </Link>
-          <Link
-            href="/"
+          </a>
+          <a
+            href="#works"
             className="text-lg font-normal text-black outline-none"
           >
             How it Works
-          </Link>
-          <Link
-            href="/"
+          </a>
+          <a
+            href="#coverage"
             className="text-lg font-normal text-black outline-none"
           >
             Coverage
-          </Link>
-          <Link
-            href="/"
+          </a>
+          <a
+            href="#faq"
             className="text-lg font-normal text-black outline-none"
           >
             FAQs
-          </Link>
+          </a>
         </div>
 
         <div className="hidden lg:flex justify-start items-center gap-6">
@@ -112,34 +112,34 @@ export default function Navbar() {
       {menuOpen && (
         <div className="lg:hidden absolute z-30 left-4 right-4 mt-4 bg-white rounded-2xl border border-[#E5E7EB] shadow-lg p-5">
           <div className="flex flex-col gap-4">
-            <Link
-              href="/"
+            <a
+              href="#service"
               className="text-lg font-normal text-black"
               onClick={() => setMenuOpen(false)}
             >
               Our Service
-            </Link>
-            <Link
-              href="/"
+            </a>
+            <a
+              href="#works"
               className="text-lg font-normal text-black"
               onClick={() => setMenuOpen(false)}
             >
               How it Works
-            </Link>
-            <Link
-              href="/"
+            </a>
+            <a
+              href="#coverage"
               className="text-lg font-normal text-black"
               onClick={() => setMenuOpen(false)}
             >
               Coverage
-            </Link>
-            <Link
-              href="/"
+            </a>
+            <a
+              href="#faq"
               className="text-lg font-normal text-black"
               onClick={() => setMenuOpen(false)}
             >
               FAQs
-            </Link>
+            </a>
             <div className="flex flex-col gap-3 pt-4 border-t border-[#E5E7EB]">
               <Link
                 href="/"
