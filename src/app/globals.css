@@ -12,8 +12,10 @@
   --font-mono: var(--font-geist-mono);
   --font-inter: var(--font-inter);
   --font-montserrat: var(--font-montserrat);
+  --font-nunito: var(--font-nunito);
+  --font-syne: var(--font-syne);
   --color-primary: #006542;
-  --color-secondary: #EEC830;
+  --color-secondary: #132F3A;
   --color-grey-04: #0A0A0A;
 }
 
@@ -22,7 +24,31 @@ body {
   color: var(--foreground);
   font-family: "Inter", sans-serif;
   width: 100%;
-  max-width: 1440px;
   margin: 0 auto;
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+.btn-shadow{
+  box-shadow: 0 20px 30px 0 rgba(0, 101, 66, 0.3);
+}
+.card-shadow{
+  box-shadow: 0 4px 6px -4px rgba(0, 0, 0, 0.1), 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+.hero-bg{
+  background-image: url("../assets/bg.webp");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.gradient-text {
+  /* 1. Define the gradient background */
+  background: linear-gradient(to right, #C59C04, #638828, #00744C );
+  
+  /* 2. Clip the background to the text boundary */
+  -webkit-background-clip: text;
+  background-clip: text;
+  
+  /* 3. Make the text fill transparent so the background shows through */
+  -webkit-text-fill-color: transparent;
+  color: transparent; /* Fallback */
 }

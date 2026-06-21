@@ -1,26 +1,164 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import logo from "@/assets/logo.webp";
 import Link from "next/link";
 
 export default function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
   return (
-    <nav className="w-full bg-background border-b border-b-[#747474] md:py-6 py-5 md:px-8 px-4 flex justify-between items-center">
-      <div className="flex justify-start items-center gap-4">
-        <Image
-          alt="logo"
-          src={logo}
-          width={36}
-          height={52}
-          className="w-full md:max-w-[36px] max-w-[24px] object-contain"
-        />
-        <p className="md:text-4xl text-2xl font-bold text-primary">Refyul</p>
-      </div>
-      <Link
-        href={"#waitlist-form"}
-        className="md:text-base text-sm font-medium text-white bg-primary rounded-lg md:p-4 p-2 cursor-pointer"
-      >
-        Join the waitlist
-      </Link>
-    </nav>
+    <header className="w-full pt-12 pb-8 sm:px-8 px-4 relative">
+      <nav className="w-full flex justify-between items-center gap-3 max-w-[1442px] mx-auto relative z-20">
+        <div className="flex justify-start items-center gap-3">
+          <Image
+            src={logo}
+            alt="logo"
+            width={37}
+            height={52}
+            className="w-full md:max-w-[37px] max-w-[24px] object-contain"
+          />
+          <p className="md:text-4xl text-2xl font-bold font-montserrat text-primary">
+            Refyul
+          </p>
+        </div>
+
+        <div className="hidden lg:flex justify-center items-center gap-6">
+          <Link
+            href="/"
+            className="text-lg font-normal text-black outline-none"
+          >
+            Our Service
+          </Link>
+          <Link
+            href="/"
+            className="text-lg font-normal text-black outline-none"
+          >
+            How it Works
+          </Link>
+          <Link
+            href="/"
+            className="text-lg font-normal text-black outline-none"
+          >
+            Coverage
+          </Link>
+          <Link
+            href="/"
+            className="text-lg font-normal text-black outline-none"
+          >
+            FAQs
+          </Link>
+        </div>
+
+        <div className="hidden lg:flex justify-start items-center gap-6">
+          <Link
+            href="/"
+            className="bg-primary rounded-full text-white md:py-2.5 py-1.5 md:px-5 px-3 md:text-lg text-base font-bold font-nunito btn-shadow outline-none"
+          >
+            Order on WhatsApp
+          </Link>
+          <Link
+            href="/"
+            className="rounded-full text-[#234D10] md:py-2.5 py-1.5 md:px-5 px-3 md:text-lg text-base font-bold font-nunito outline-none"
+          >
+            Become a vendor
+          </Link>
+        </div>
+
+        <button
+          type="button"
+          className="lg:hidden inline-flex items-center justify-center p-2 rounded-full border border-[#D1D5DB] bg-white cursor-pointer outline-none"
+          onClick={() => setMenuOpen((prev) => !prev)}
+          aria-expanded={menuOpen}
+          aria-label={menuOpen ? "Close mobile menu" : "Open mobile menu"}
+        >
+          {menuOpen ? (
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18 6L6 18M6 6L18 18"
+                stroke="#000"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          ) : (
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M4 6H20M4 12H20M4 18H20"
+                stroke="#000"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          )}
+        </button>
+      </nav>
+
+      {menuOpen && (
+        <div className="lg:hidden absolute z-30 left-4 right-4 mt-4 bg-white rounded-2xl border border-[#E5E7EB] shadow-lg p-5">
+          <div className="flex flex-col gap-4">
+            <Link
+              href="/"
+              className="text-lg font-normal text-black"
+              onClick={() => setMenuOpen(false)}
+            >
+              Our Service
+            </Link>
+            <Link
+              href="/"
+              className="text-lg font-normal text-black"
+              onClick={() => setMenuOpen(false)}
+            >
+              How it Works
+            </Link>
+            <Link
+              href="/"
+              className="text-lg font-normal text-black"
+              onClick={() => setMenuOpen(false)}
+            >
+              Coverage
+            </Link>
+            <Link
+              href="/"
+              className="text-lg font-normal text-black"
+              onClick={() => setMenuOpen(false)}
+            >
+              FAQs
+            </Link>
+            <div className="flex flex-col gap-3 pt-4 border-t border-[#E5E7EB]">
+              <Link
+                href="/"
+                className="bg-primary rounded-full text-white py-3 text-center text-base font-bold font-nunito"
+                onClick={() => setMenuOpen(false)}
+              >
+                Order on WhatsApp
+              </Link>
+              <Link
+                href="/"
+                className="rounded-full text-[#234D10] border border-[#D1D5DB] py-3 text-center text-base font-bold font-nunito"
+                onClick={() => setMenuOpen(false)}
+              >
+                Become a vendor
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
+    </header>
   );
 }

@@ -1,7 +1,13 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Inter, Montserrat } from "next/font/google";
+import {
+  Geist,
+  Geist_Mono,
+  Inter,
+  Montserrat,
+  Nunito,
+  Syne,
+} from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/navbar";
 import Script from "next/script";
 import { Footer } from "@/components/footer";
 import { Analytics } from "@vercel/analytics/next";
@@ -25,10 +31,95 @@ const montserratFont = Montserrat({
   variable: "--font-montserrat",
 });
 
+const nunitoFont = Nunito({
+  subsets: ["latin"],
+  variable: "--font-nunito",
+});
+
+const syneFont = Syne({
+  subsets: ["latin"],
+  variable: "--font-syne",
+});
+
+const BASE_URL = "https://refyul.org";
+
 export const metadata: Metadata = {
-  title: "Refyul",
+  title: {
+    default: "Refyul — On-Demand Fuel & Gas Delivery in Lagos",
+    template: "%s | Refyul",
+  },
   description:
     "Refyul provides an on-demand logistics platform for the delivery of fuel and cooking gas in Nigeria, connecting customers directly with licensed stations via a mobile application.",
+  metadataBase: new URL(BASE_URL),
+  openGraph: {
+    title: "Refyul - On-Demand Fuel & Gas Delivery in Lagos | No More Scarcity",
+    description:
+      "Order petrol, diesel, and cooking gas via WhatsApp. Fast 18-minute delivery across Lagos, verified vendors, and transparent pricing. Never queue for fuel again.",
+    url: BASE_URL,
+    siteName: "Refyul",
+    images: [
+      {
+        url: `${BASE_URL}/opengraph-image.png`,
+        width: 1200,
+        height: 630,
+        alt: "Refyul - On-Demand Fuel Delivery",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Refyul - On-Demand Fuel & Gas Delivery in Lagos",
+    description:
+      "Order petrol, diesel, and cooking gas via WhatsApp. Fast delivery across Lagos, verified vendors, and transparent pricing.",
+    images: {
+      url: `${BASE_URL}/opengraph-image.png`,
+      alt: "Refyul - On-Demand Fuel Delivery",
+    },
+  },
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      noimageindex: false,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  alternates: {
+    canonical: BASE_URL,
+  },
+  icons: {
+    icon: [{ url: "/favicon.ico", type: "image/x-icon", rel: "icon" }],
+  },
+};
+
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": `${BASE_URL}/#organization`,
+  name: "Refyul",
+  url: BASE_URL,
+  logo: `${BASE_URL}/logo.webp`,
+  description:
+    "Refyul provides an on-demand logistics platform for the delivery of fuel and cooking gas in Nigeria.",
+  sameAs: [
+    "https://twitter.com/refyul",
+    "https://instagram.com/refyul",
+    "https://linkedin.com/company/refyul",
+  ],
+};
+
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": `${BASE_URL}/#website`,
+  name: "Refyul - On-Demand Fuel Delivery",
+  url: BASE_URL,
 };
 const TIKTOK_PIXEL_ID = "D49IHTJC77U2U4VHOJP0";
 export default function RootLayout({
@@ -39,6 +130,18 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteJsonLd),
+          }}
+        />
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-CNRZY86WLZ"
           strategy="afterInteractive"
@@ -53,7 +156,7 @@ export default function RootLayout({
         </Script>
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${interFont.variable} ${montserratFont.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${interFont.variable} ${montserratFont.variable} ${nunitoFont.variable} ${syneFont.variable} antialiased`}
       >
         <Script id="tiktok-pixel" strategy="beforeInteractive">
           {`
@@ -67,7 +170,7 @@ export default function RootLayout({
             }(window, document, 'ttq');
           `}
         </Script>
-        <Navbar />
+
         <main className="font-inter">{children}</main>
         <Footer />
         <Analytics />
