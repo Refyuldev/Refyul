@@ -306,11 +306,7 @@ export default function Home() {
                 <p className="sm:text-base text-sm text-[#717182]">
                   {item.description}
                 </p>
-                {item.price && (
-                  <p className="text-base text-[#717182]">
-                    from <span className={item.color}>{item.price}</span>
-                  </p>
-                )}
+
                 {item.subtext && (
                   <p
                     className={`sm:text-base text-sm font-semibold ${item.color}`}
@@ -446,7 +442,7 @@ export default function Home() {
                   />
                 </svg>
 
-                <p className="text-[#7D7D7D] text-base">Active</p>
+                <p className="text-[#7D7D7D] text-base">Coming Soon</p>
               </div>
             </div>
           </section>

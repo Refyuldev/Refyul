@@ -77,7 +77,7 @@ export const deliveryData: deliveryDataType[] = [
     title: "Petrol (PMS)",
     description:
       "For cars, motorcycles, and small generators. Fresh, quality PMS sourced from licensed depots. Available daily.",
-    price: "₦850/liter",
+    price: "-",
     color: "text-[#006542]",
   },
   {
@@ -85,7 +85,7 @@ export const deliveryData: deliveryDataType[] = [
     title: "Diesel (AGO)",
     description:
       "For large generators, trucks, heavy equipment, and industrial machines. Bulk and small-scale available.",
-    price: "₦1250/liter",
+    price: "-",
     color: "text-[#006542]",
   },
   {
@@ -93,7 +93,7 @@ export const deliveryData: deliveryDataType[] = [
     title: "Cooking Gas (LPG)",
     description:
       "Cylinder refills and exchanges for homes, restaurants, bakeries, and caterers. All cylinder sizes supported.",
-    price: "₦1250/liter",
+    price: "-",
     color: "text-[#006542]",
   },
   {
