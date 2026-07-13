@@ -42,7 +42,8 @@ export default function Home() {
             <div className="w-full flex flex-col justify-start items-start gap-10">
               <div className="w-full text-center flex sm:flex-row flex-col justify-start items-center gap-6">
                 <Link
-                  href="/"
+                  href="https://wa.me/2348023700625?text=Hi%20Teni%2C%20I%20want%20to%20order%20fuel"
+                  target="_blank"
                   className="bg-primary rounded-full text-white md:py-2.5 py-1.5 md:px-5 px-3 md:text-lg text-base font-bold font-nunito btn-shadow sm:w-auto w-full"
                 >
                   Order on WhatsApp
@@ -380,13 +381,14 @@ export default function Home() {
               <p className="sm:text-2xl text-lg font-bold font-syne">
                 Expanding soon:{" "}
                 <span className="text-base font-inter font-normal">
-                  Aubja, Port Harcourt & Ibadan
+                  Abuja, Port Harcourt & Ibadan
                 </span>
               </p>
             </div>
             <div className="flex flex-col justify-start items-start gap-4 text-center">
               <Link
-                href="/"
+                href="https://wa.me/2348023700625?text=Hi%20Teni%2C%20I%20want%20to%20order%20fuel"
+                target="_blank"
                 className="bg-primary rounded-full text-white md:py-2.5 py-1.5 md:px-5 px-3 md:text-lg text-base font-bold font-nunito btn-shadow sm:w-auto w-full"
               >
                 Order on WhatsApp →
@@ -575,8 +577,9 @@ export default function Home() {
           </div>
           <div className="w-full flex justify-center items-center text-center">
             <Link
-              href="/"
+              href="https://wa.me/2348023700625?text=Hi%20Teni%2C%20I%20want%20to%20order%20fuel"
               className="bg-primary rounded-full text-white md:py-2.5 py-1.5 md:px-5 px-3 md:text-lg text-base font-bold font-nunito btn-shadow sm:w-auto w-full"
+              target="_blank"
             >
               Order on Whatsapp
             </Link>

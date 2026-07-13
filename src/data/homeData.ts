@@ -225,7 +225,7 @@ export const faqData: faqDataType[] = [
   {
     question: "Can I order for my business or fleet?",
     answer:
-      "Yes! We have dedicated Business Accounts with bulk pricing, monthly invoicing, fleet management features, and a dedicated account manager. Contact us at business@refyul.ng to set up your business account.",
+      "Yes! We have dedicated Business Accounts with bulk pricing, monthly invoicing, fleet management features, and a dedicated account manager. Contact us at business@refyul.org to set up your business account.",
   },
 ];
 

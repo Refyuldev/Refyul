@@ -53,8 +53,9 @@ export default function Navbar() {
 
         <div className="hidden lg:flex justify-start items-center gap-6">
           <Link
-            href="/"
+            href="https://wa.me/2348023700625?text=Hi%20Teni%2C%20I%20want%20to%20order%20fuel"
             className="bg-primary rounded-full text-white md:py-2.5 py-1.5 md:px-5 px-3 md:text-lg text-base font-bold font-nunito btn-shadow outline-none"
+            target="_blank"
           >
             Order on WhatsApp
           </Link>
@@ -142,7 +143,7 @@ export default function Navbar() {
             </a>
             <div className="flex flex-col gap-3 pt-4 border-t border-[#E5E7EB]">
               <Link
-                href="/"
+                href="https://wa.me/2348023700625?text=Hi%20Teni%2C%20I%20want%20to%20order%20fuel"
                 className="bg-primary rounded-full text-white py-3 text-center text-base font-bold font-nunito"
                 onClick={() => setMenuOpen(false)}
               >
