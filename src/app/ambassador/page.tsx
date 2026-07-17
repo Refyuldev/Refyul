@@ -5,6 +5,7 @@ import Link from "next/link";
 import drum from "@/assets/drum.webp";
 import tank from "@/assets/tank.webp";
 import phoneHero from "@/assets/phonehero.webp";
+import { AmbassadorForm } from "@/components/AmbassadorForm";
 
 export default function AmbassadorPage() {
   return (
@@ -264,6 +265,29 @@ export default function AmbassadorPage() {
           </section>
         </section>
       </section>
+      {/* Forms */}
+      <section className="w-full flex justify-center items-center py-20 px-4 sm:px-8">
+        <section className="w-full max-w-[1442px] mx-auto flex lg:flex-row flex-col justify-between lg:items-start items-center lg:gap-4 gap-8">
+          <section className="flex flex-col justify-start items-start gap-6 lg:max-w-[650px] max-w-full">
+            <div className="w-full flex flex-col justify-start items-start gap-2">
+              <span className="bg-[#E8F7ED] py-1 px-3.5 text-[#009B5A] text-sm rounded-full font-medium uppercase leading-tight">
+                SIGN UP
+              </span>
+              <h2 className="md:text-[48px] text-3xl leading-tight font-extrabold text-secondary font-syne">
+                Join the Refyul Ambassador Program
+              </h2>
+            </div>
+            <p className="text-base leading-tight text-[#7D7D7D] w-full max-w-[590px]">
+              Fill in your details below. We review every application and send
+              your referral code and link by WhatsApp once you are approved,
+              usually within 48 hours.
+            </p>
+          </section>
+          <section className="w-full max-w-[550px]">
+            <AmbassadorForm />
+          </section>
+        </section>
+      </section>
       {/* CTA */}
       <section className="w-full flex justify-center items-center py-20 px-4 sm:px-8 bg-white">
         <section className="w-full flex flex-col justify-center items-center gap-3 text-center">
@@ -275,7 +299,7 @@ export default function AmbassadorPage() {
             scarcity.
           </p>
           <Link
-            href="/"
+            href="/ambassador"
             className="bg-[#F9CE2F] mt-4 rounded-full text-white md:py-2.5 py-1.5 md:px-5 px-3 md:text-lg text-base font-bold font-nunito btn-shadow sm:w-auto w-full"
           >
             Become an Ambassador
